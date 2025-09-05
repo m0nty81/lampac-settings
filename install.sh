@@ -40,10 +40,10 @@ curl -k -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/
 curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/init.conf > $DEST/init.conf
 if ip addr | grep 192.168.10.; then
     echo "LAR subnet detected"
-        curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/lampainit.my.lar.js > $DEST/plugins/lampainit.my.js
+    curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/lampainit.my.lar.js > $DEST/plugins/lampainit.my.js
 elif ip addr | grep 192.168.3.; then
     echo "UVA subnet detected"
-    curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/lampainit_uva.js > $DEST/plugins/lampainit.my.js
+    curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/lampainit.my.uva.js > $DEST/plugins/lampainit.my.js
 else
     echo "Unknown subnet!"
 fi
