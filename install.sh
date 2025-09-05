@@ -51,7 +51,7 @@ fi
 chmod 755 $DEST/update.sh
 #crontab -l | { cat; echo "$(shuf -i 10-55 -n 1) * * * * /bin/bash $DEST/update.sh"; } | crontab -
 
-CRON_JOB="$(shuf -i 10-55 -n 1) * * * * /bin/bash $DEST/update.sh"
+CRON_JOB="$(0 3 * * MON /bin/bash $DEST/update.sh"
 (crontab -l | grep -vF "/bin/bash $DEST/update.sh"; echo "$CRON_JOB") | crontab -
 
 # Create service
