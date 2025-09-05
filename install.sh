@@ -37,11 +37,10 @@ curl -k -s https://api.github.com/repos/immisterio/Lampac/releases/latest | grep
 curl -k -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/update.sh > $DEST/update.sh
 
 # custom settings
-curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/init.conf > $DEST/init.conf
-curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/lampainit-invc.my.js > $DEST/plugins/lampainit-invc.my.js
+curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/init.conf > $DEST/init.conf
 if ip addr | grep 192.168.10.; then
     echo "LAR subnet detected"
-    curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/lampainit_lar.js > $DEST/plugins/lampainit.my.js
+        curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/lampainit.my.lar.js > $DEST/plugins/lampainit.my.js
 elif ip addr | grep 192.168.3.; then
     echo "UVA subnet detected"
     curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/lampainit_uva.js > $DEST/plugins/lampainit.my.js
