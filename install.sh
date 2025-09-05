@@ -34,7 +34,7 @@ rm -f publish.zip
 
 # automatic updates
 curl -k -s https://api.github.com/repos/immisterio/Lampac/releases/latest | grep tag_name | sed s/[^0-9]//g > $DEST/data/vers.txt
-curl -k -s https://raw.githubusercontent.com/m0nty81/lampac-settings/main/update.sh > $DEST/update.sh
+curl -k -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/update.sh > $DEST/update.sh
 
 # custom settings
 curl -s https://raw.githubusercontent.com/m0nty81/lampac-settings/refs/heads/main/init.conf > $DEST/init.conf
